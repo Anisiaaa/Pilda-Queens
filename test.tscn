@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://rif1yldopgap"]
+
+[ext_resource type="Script" uid="uid://gfg35a80jmdf" path="res://scripts/testing.gd" id="1_37kl0"]
+[ext_resource type="Script" uid="uid://3vpihuhvd7nv" path="res://scripts/level_generator.gd" id="2_8uh7m"]
+
+[node name="Test" type="Node2D" unique_id=1483400689]
+script = ExtResource("1_37kl0")
+
+[node name="LevelGenerator" type="Node2D" parent="." unique_id=1012175298]
+script = ExtResource("2_8uh7m")

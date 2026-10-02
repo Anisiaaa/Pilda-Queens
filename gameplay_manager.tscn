@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://choyiufp6e1u1"]
+
+[ext_resource type="Script" uid="uid://bsxt6rnapgmg5" path="res://scripts/gameplay_manager.gd" id="1_lsmak"]
+[ext_resource type="Texture2D" uid="uid://k4xo6s37w5tf" path="res://textures/BGG.png" id="2_l6e5l"]
+[ext_resource type="Script" uid="uid://3vpihuhvd7nv" path="res://scripts/level_generator.gd" id="2_q4jul"]
+[ext_resource type="Script" uid="uid://tq3ssjwb6ax8" path="res://scripts/rule_validator.gd" id="3_l6e5l"]
+[ext_resource type="Script" uid="uid://dngru5288ialw" path="res://scripts/life.gd" id="5_q4jul"]
+
+[node name="GameplayManager" type="Node2D" unique_id=236159772]
+script = ExtResource("1_lsmak")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2018119750]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_l6e5l")
+
+[node name="LevelGenerator" type="Node" parent="." unique_id=1439562181]
+script = ExtResource("2_q4jul")
+
+[node name="RuleValidator" type="Node" parent="." unique_id=1734338193]
+script = ExtResource("3_l6e5l")
+
+[node name="UI" type="Control" parent="." unique_id=1552678500]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Overlay" type="Control" parent="UI" unique_id=248044452]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="UI/Overlay" unique_id=524858190]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Lives" type="Node2D" parent="." unique_id=79983381]
+
+[node name="Life0" type="Sprite2D" parent="Lives" unique_id=1234127347]
+script = ExtResource("5_q4jul")
+
+[node name="Life1" type="Sprite2D" parent="Lives" unique_id=1052917247]
+script = ExtResource("5_q4jul")
+
+[node name="Life2" type="Sprite2D" parent="Lives" unique_id=676199441]
+script = ExtResource("5_q4jul")
+
+[node name="Cells" type="Node2D" parent="." unique_id=1569406676]
