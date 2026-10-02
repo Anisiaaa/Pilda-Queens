@@ -1,4 +1,4 @@
-#Pilda Queens
+# Pilda Queens
 
 A Godot 4.7 implementation of a Queens-style logic puzzle. Place skulls on an 8×8 board under multiple simultaneous constraints, with every level generated fresh and guaranteed to have exactly one solution.
 About the Game
@@ -16,13 +16,13 @@ Rules
 
     No two skulls may share the same colored region.
 
-#Controls
+## Controls
 
     Left click a cell to cycle it: Empty → X → Skull → Empty
 
     Right click a non-empty cell to clear it
 
-#Win / Loss
+## Win / Loss
 
     Win: all 8 skulls placed with every rule satisfied.
 
@@ -30,7 +30,7 @@ Rules
 
     New level: after a win, a fresh level is generated automatically.
 
-#How Levels Are Generated
+## How Levels Are Generated
 
 Every level is built from scratch at runtime, with two guarantees: exactly one solution, and no repeats within a session.
 1. Skull layout
@@ -52,7 +52,7 @@ Each completed board is hashed. If the hash has been seen before in this session
 Solving under constraints
 
 The solver that runs during region growth is a row-by-row backtracking search. For each row, it tries every column and rejects a placement if it violates any of the four rules. Because all four constraints are checked at once, the search is heavily pruned — most of the 8⁸ naive placements are eliminated within a few rows, and the search returns in milliseconds even on partial boards.
-#Run the Project
+## Run the Project
 
     Open the project folder in Godot 4.7.
 
@@ -60,7 +60,7 @@ The solver that runs during region growth is a row-by-row backtracking search. F
 
     A new level is generated and displayed immediately.
 
-#Project Structure
+## Project Structure
 
     project.godot — Godot project configuration
 
